@@ -1,0 +1,960 @@
+TensorFlow:  1.10
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 464.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
+10	images/sec: 467.7 +/- 0.6 (jitter = 1.1)	0.000	0.000	0.000
+20	images/sec: 466.1 +/- 0.8 (jitter = 2.9)	0.000	0.000	0.000
+30	images/sec: 465.5 +/- 0.8 (jitter = 4.1)	0.000	0.000	0.000
+40	images/sec: 464.8 +/- 0.7 (jitter = 4.4)	0.000	0.000	0.000
+50	images/sec: 464.7 +/- 0.6 (jitter = 4.3)	0.000	0.000	0.000
+60	images/sec: 464.5 +/- 0.5 (jitter = 4.5)	0.000	0.000	0.000
+70	images/sec: 464.5 +/- 0.5 (jitter = 4.3)	0.000	0.000	0.000
+80	images/sec: 464.8 +/- 0.5 (jitter = 4.2)	0.000	0.000	0.000
+90	images/sec: 464.8 +/- 0.4 (jitter = 4.0)	0.000	0.000	0.000
+100	images/sec: 465.1 +/- 0.4 (jitter = 3.6)	0.000	0.000	0.031
+----------------------------------------------------------------
+total images/sec: 463.95
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 495.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 493.3 +/- 0.5 (jitter = 1.4)	0.000	0.000	0.000
+20	images/sec: 492.7 +/- 0.6 (jitter = 2.1)	0.000	0.000	0.016
+30	images/sec: 492.7 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.016
+40	images/sec: 493.0 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.000
+50	images/sec: 492.7 +/- 0.4 (jitter = 2.0)	0.000	0.000	0.016
+60	images/sec: 492.7 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.000
+70	images/sec: 492.9 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.031
+80	images/sec: 492.7 +/- 0.3 (jitter = 1.9)	0.000	0.000	0.000
+90	images/sec: 492.6 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.016
+100	images/sec: 492.6 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 491.92
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 507.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+10	images/sec: 509.9 +/- 0.4 (jitter = 1.0)	0.000	0.000	0.000
+20	images/sec: 509.2 +/- 0.5 (jitter = 2.0)	0.000	0.008	0.008
+30	images/sec: 508.7 +/- 0.4 (jitter = 2.3)	0.000	0.000	0.000
+40	images/sec: 508.6 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
+50	images/sec: 508.4 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.000
+60	images/sec: 508.1 +/- 0.3 (jitter = 2.3)	0.000	0.008	0.008
+70	images/sec: 507.8 +/- 0.3 (jitter = 2.6)	0.000	0.008	0.016
+80	images/sec: 507.6 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.008
+90	images/sec: 507.3 +/- 0.3 (jitter = 2.4)	0.000	0.000	0.000
+100	images/sec: 507.0 +/- 0.3 (jitter = 2.6)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 506.58
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 644.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 639.0 +/- 1.1 (jitter = 2.8)	0.000	0.000	0.031
+20	images/sec: 638.0 +/- 0.7 (jitter = 2.8)	0.000	0.000	0.000
+30	images/sec: 637.5 +/- 0.6 (jitter = 3.3)	0.000	0.000	0.000
+40	images/sec: 637.2 +/- 0.7 (jitter = 3.7)	0.000	0.000	0.000
+50	images/sec: 638.0 +/- 0.7 (jitter = 4.5)	0.000	0.000	0.000
+60	images/sec: 637.2 +/- 0.8 (jitter = 4.7)	0.000	0.000	0.000
+70	images/sec: 636.3 +/- 0.9 (jitter = 4.7)	0.000	0.000	0.000
+80	images/sec: 636.5 +/- 0.8 (jitter = 5.2)	0.000	0.000	0.031
+90	images/sec: 636.8 +/- 0.7 (jitter = 5.3)	0.000	0.000	0.000
+100	images/sec: 637.0 +/- 0.7 (jitter = 5.4)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 635.03
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 676.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 677.3 +/- 1.2 (jitter = 5.1)	0.000	0.000	0.016
+20	images/sec: 676.3 +/- 0.9 (jitter = 5.3)	0.000	0.000	0.000
+30	images/sec: 677.4 +/- 0.7 (jitter = 3.6)	0.000	0.000	0.000
+40	images/sec: 678.0 +/- 0.6 (jitter = 3.4)	0.000	0.000	0.000
+50	images/sec: 677.2 +/- 1.1 (jitter = 4.1)	0.000	0.000	0.000
+60	images/sec: 677.4 +/- 0.9 (jitter = 4.4)	0.000	0.000	0.000
+70	images/sec: 677.4 +/- 0.8 (jitter = 4.1)	0.000	0.000	0.000
+80	images/sec: 677.4 +/- 0.8 (jitter = 4.2)	0.000	0.000	0.000
+90	images/sec: 677.6 +/- 0.7 (jitter = 4.2)	0.000	0.000	0.000
+100	images/sec: 677.6 +/- 0.6 (jitter = 4.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 676.58
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 710.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.008
+10	images/sec: 706.8 +/- 1.5 (jitter = 1.7)	0.000	0.000	0.008
+20	images/sec: 707.6 +/- 0.9 (jitter = 2.2)	0.000	0.000	0.000
+30	images/sec: 706.6 +/- 0.7 (jitter = 3.8)	0.000	0.000	0.008
+40	images/sec: 706.8 +/- 0.6 (jitter = 3.5)	0.000	0.000	0.000
+50	images/sec: 706.8 +/- 0.5 (jitter = 3.3)	0.000	0.000	0.000
+60	images/sec: 706.5 +/- 0.4 (jitter = 3.4)	0.000	0.000	0.016
+70	images/sec: 706.2 +/- 0.4 (jitter = 3.0)	0.000	0.000	0.000
+80	images/sec: 705.7 +/- 0.5 (jitter = 2.9)	0.000	0.000	0.000
+90	images/sec: 705.6 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.008
+100	images/sec: 705.6 +/- 0.4 (jitter = 2.6)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 704.93
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet152
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 263.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 263.2 +/- 0.3 (jitter = 0.8)	0.000	0.000	0.000
+20	images/sec: 263.0 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.062
+30	images/sec: 263.1 +/- 0.3 (jitter = 1.3)	0.000	0.000	0.000
+40	images/sec: 263.3 +/- 0.2 (jitter = 1.1)	0.000	0.000	0.000
+50	images/sec: 263.6 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.000
+60	images/sec: 263.6 +/- 0.2 (jitter = 1.3)	0.000	0.000	0.000
+70	images/sec: 263.5 +/- 0.2 (jitter = 1.3)	0.000	0.000	0.000
+80	images/sec: 263.4 +/- 0.2 (jitter = 1.4)	0.000	0.000	0.031
+90	images/sec: 263.2 +/- 0.2 (jitter = 1.4)	0.000	0.000	0.000
+100	images/sec: 263.0 +/- 0.2 (jitter = 1.6)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 262.64
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet152
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 280.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 280.5 +/- 0.1 (jitter = 0.4)	0.000	0.000	0.000
+20	images/sec: 280.4 +/- 0.1 (jitter = 0.7)	0.000	0.000	0.000
+30	images/sec: 280.1 +/- 0.1 (jitter = 0.9)	0.000	0.000	0.000
+40	images/sec: 280.0 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.000
+50	images/sec: 279.9 +/- 0.3 (jitter = 0.9)	0.000	0.000	0.016
+60	images/sec: 279.7 +/- 0.3 (jitter = 1.1)	0.000	0.000	0.000
+70	images/sec: 279.7 +/- 0.3 (jitter = 1.1)	0.000	0.000	0.000
+80	images/sec: 279.7 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.016
+90	images/sec: 279.7 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.016
+100	images/sec: 279.6 +/- 0.2 (jitter = 1.2)	0.000	0.016	0.016
+----------------------------------------------------------------
+total images/sec: 279.35
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet152
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 289.8 +/- 0.0 (jitter = 0.0)	0.000	0.008	0.016
+10	images/sec: 291.5 +/- 0.3 (jitter = 0.9)	0.000	0.008	0.008
+20	images/sec: 291.7 +/- 0.2 (jitter = 0.6)	0.000	0.000	0.008
+30	images/sec: 291.7 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.016
+40	images/sec: 291.5 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.000
+50	images/sec: 291.5 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.000
+60	images/sec: 291.4 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.016
+70	images/sec: 290.6 +/- 0.3 (jitter = 0.8)	0.000	0.008	0.016
+80	images/sec: 289.7 +/- 0.4 (jitter = 1.1)	0.000	0.008	0.008
+90	images/sec: 289.1 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.016
+100	images/sec: 289.1 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 288.98
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 4639.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 4500.4 +/- 31.9 (jitter = 112.2)	0.000	0.000	0.000
+20	images/sec: 4573.9 +/- 24.0 (jitter = 64.5)	0.000	0.000	0.000
+30	images/sec: 4557.0 +/- 17.1 (jitter = 103.4)	0.000	0.000	0.000
+40	images/sec: 4557.6 +/- 15.1 (jitter = 103.2)	0.000	0.000	0.000
+50	images/sec: 4555.6 +/- 14.1 (jitter = 106.2)	0.000	0.000	0.000
+60	images/sec: 4542.7 +/- 16.8 (jitter = 100.9)	0.000	0.000	0.000
+70	images/sec: 4558.3 +/- 15.5 (jitter = 98.4)	0.000	0.000	0.000
+80	images/sec: 4574.3 +/- 15.0 (jitter = 100.4)	0.000	0.000	0.000
+90	images/sec: 4571.1 +/- 13.5 (jitter = 95.5)	0.000	0.000	0.000
+100	images/sec: 4569.9 +/- 13.0 (jitter = 100.4)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 4501.43
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 5881.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 5723.1 +/- 49.1 (jitter = 171.8)	0.000	0.000	0.000
+20	images/sec: 5690.8 +/- 29.1 (jitter = 131.9)	0.000	0.016	0.016
+30	images/sec: 5713.6 +/- 25.4 (jitter = 158.5)	0.000	0.000	0.000
+40	images/sec: 5760.1 +/- 25.0 (jitter = 181.4)	0.000	0.000	0.000
+50	images/sec: 5787.5 +/- 22.0 (jitter = 185.4)	0.000	0.000	0.000
+60	images/sec: 5797.2 +/- 18.7 (jitter = 163.0)	0.000	0.000	0.000
+70	images/sec: 5807.9 +/- 16.7 (jitter = 142.5)	0.000	0.000	0.000
+80	images/sec: 5813.9 +/- 15.0 (jitter = 131.2)	0.000	0.000	0.000
+90	images/sec: 5827.0 +/- 14.1 (jitter = 122.6)	0.000	0.000	0.000
+100	images/sec: 5835.6 +/- 13.0 (jitter = 104.5)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 5770.26
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 6473.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 6410.9 +/- 19.9 (jitter = 79.5)	0.000	0.000	0.000
+20	images/sec: 6415.3 +/- 14.8 (jitter = 67.7)	0.000	0.000	0.008
+30	images/sec: 6408.8 +/- 11.5 (jitter = 68.3)	0.000	0.008	0.008
+40	images/sec: 6413.2 +/- 9.3 (jitter = 62.1)	0.000	0.000	0.000
+50	images/sec: 6395.5 +/- 11.1 (jitter = 71.8)	0.000	0.000	0.000
+60	images/sec: 6390.7 +/- 9.9 (jitter = 74.1)	0.000	0.000	0.000
+70	images/sec: 6380.3 +/- 10.7 (jitter = 87.2)	0.000	0.000	0.008
+80	images/sec: 6385.3 +/- 9.8 (jitter = 74.8)	0.000	0.000	0.000
+90	images/sec: 6376.9 +/- 10.3 (jitter = 82.7)	0.000	0.000	0.000
+100	images/sec: 6375.2 +/- 9.6 (jitter = 85.2)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 6333.50
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       vgg16
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 406.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 404.9 +/- 0.7 (jitter = 2.6)	0.000	0.000	0.000
+20	images/sec: 405.3 +/- 0.5 (jitter = 2.5)	0.000	0.000	0.000
+30	images/sec: 405.6 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
+40	images/sec: 405.4 +/- 0.3 (jitter = 1.8)	0.000	0.000	0.000
+50	images/sec: 405.0 +/- 0.5 (jitter = 2.1)	0.000	0.000	0.000
+60	images/sec: 405.2 +/- 0.4 (jitter = 2.1)	0.000	0.000	0.000
+70	images/sec: 405.4 +/- 0.4 (jitter = 2.2)	0.000	0.031	0.062
+80	images/sec: 405.3 +/- 0.4 (jitter = 1.9)	0.000	0.000	0.000
+90	images/sec: 405.2 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
+100	images/sec: 405.0 +/- 0.3 (jitter = 2.2)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 404.17
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       vgg16
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 418.0 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
+10	images/sec: 416.6 +/- 0.8 (jitter = 2.0)	0.000	0.000	0.016
+20	images/sec: 416.3 +/- 0.5 (jitter = 2.2)	0.000	0.000	0.000
+30	images/sec: 417.1 +/- 0.5 (jitter = 2.3)	0.000	0.000	0.000
+40	images/sec: 416.8 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
+50	images/sec: 416.5 +/- 0.4 (jitter = 3.2)	0.000	0.000	0.000
+60	images/sec: 416.3 +/- 0.4 (jitter = 3.1)	0.000	0.000	0.000
+70	images/sec: 416.2 +/- 0.4 (jitter = 3.5)	0.000	0.000	0.000
+80	images/sec: 415.9 +/- 0.3 (jitter = 3.5)	0.000	0.000	0.016
+90	images/sec: 415.9 +/- 0.3 (jitter = 3.3)	0.000	0.000	0.000
+100	images/sec: 415.7 +/- 0.3 (jitter = 3.3)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 415.27
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       vgg16
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 415.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 416.5 +/- 0.8 (jitter = 1.8)	0.000	0.000	0.000
+20	images/sec: 416.2 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.008
+30	images/sec: 416.0 +/- 0.4 (jitter = 2.3)	0.000	0.000	0.008
+40	images/sec: 416.1 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
+50	images/sec: 415.9 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.000
+60	images/sec: 415.9 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.016
+70	images/sec: 415.7 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.008
+80	images/sec: 415.5 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.008
+90	images/sec: 415.3 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.000
+100	images/sec: 414.8 +/- 0.3 (jitter = 2.7)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 414.57
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 469.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
+10	images/sec: 461.4 +/- 2.6 (jitter = 4.4)	0.000	0.000	0.000
+20	images/sec: 462.7 +/- 1.4 (jitter = 4.2)	0.000	0.000	0.000
+30	images/sec: 463.8 +/- 1.0 (jitter = 2.8)	0.000	0.000	0.000
+40	images/sec: 464.0 +/- 0.8 (jitter = 2.8)	0.000	0.000	0.000
+50	images/sec: 464.1 +/- 0.6 (jitter = 2.8)	0.000	0.000	0.000
+60	images/sec: 464.2 +/- 0.6 (jitter = 2.9)	0.000	0.000	0.000
+70	images/sec: 464.4 +/- 0.5 (jitter = 2.9)	0.000	0.000	0.000
+80	images/sec: 464.1 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
+90	images/sec: 464.2 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
+100	images/sec: 464.3 +/- 0.4 (jitter = 2.8)	0.000	0.000	0.031
+----------------------------------------------------------------
+total images/sec: 463.27
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 495.6 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 494.9 +/- 0.5 (jitter = 1.5)	0.000	0.000	0.000
+20	images/sec: 494.0 +/- 1.0 (jitter = 2.3)	0.000	0.000	0.016
+30	images/sec: 494.1 +/- 0.7 (jitter = 2.2)	0.000	0.000	0.016
+40	images/sec: 494.1 +/- 0.5 (jitter = 1.8)	0.000	0.000	0.000
+50	images/sec: 494.3 +/- 0.4 (jitter = 1.6)	0.000	0.000	0.016
+60	images/sec: 494.3 +/- 0.4 (jitter = 1.6)	0.000	0.000	0.000
+70	images/sec: 493.8 +/- 0.4 (jitter = 2.0)	0.000	0.000	0.031
+80	images/sec: 493.4 +/- 0.4 (jitter = 2.1)	0.000	0.000	0.000
+90	images/sec: 493.4 +/- 0.4 (jitter = 2.1)	0.000	0.000	0.016
+100	images/sec: 493.4 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 492.66
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 505.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+10	images/sec: 506.5 +/- 0.5 (jitter = 1.7)	0.000	0.000	0.000
+20	images/sec: 506.9 +/- 0.3 (jitter = 1.8)	0.000	0.008	0.008
+30	images/sec: 506.0 +/- 0.8 (jitter = 1.4)	0.000	0.000	0.000
+40	images/sec: 506.0 +/- 0.6 (jitter = 1.7)	0.000	0.000	0.000
+50	images/sec: 505.9 +/- 0.5 (jitter = 1.9)	0.000	0.000	0.000
+60	images/sec: 505.9 +/- 0.5 (jitter = 2.1)	0.000	0.008	0.008
+70	images/sec: 505.9 +/- 0.4 (jitter = 1.9)	0.000	0.008	0.016
+80	images/sec: 505.8 +/- 0.4 (jitter = 1.8)	0.000	0.000	0.008
+90	images/sec: 505.9 +/- 0.3 (jitter = 1.8)	0.000	0.000	0.000
+100	images/sec: 505.8 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 505.48
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 642.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 640.7 +/- 0.9 (jitter = 2.0)	0.000	0.000	0.031
+20	images/sec: 637.8 +/- 1.4 (jitter = 4.6)	0.000	0.000	0.000
+30	images/sec: 638.5 +/- 1.0 (jitter = 3.9)	0.000	0.000	0.000
+40	images/sec: 637.6 +/- 0.8 (jitter = 4.7)	0.000	0.000	0.000
+50	images/sec: 636.9 +/- 0.7 (jitter = 4.2)	0.000	0.000	0.000
+60	images/sec: 637.4 +/- 0.7 (jitter = 4.4)	0.000	0.000	0.000
+70	images/sec: 637.9 +/- 0.6 (jitter = 4.7)	0.000	0.000	0.000
+80	images/sec: 637.9 +/- 0.7 (jitter = 4.9)	0.000	0.000	0.031
+90	images/sec: 638.7 +/- 0.6 (jitter = 5.5)	0.000	0.000	0.000
+100	images/sec: 639.0 +/- 0.6 (jitter = 5.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 637.13
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 676.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 676.1 +/- 2.8 (jitter = 2.4)	0.000	0.000	0.016
+20	images/sec: 676.7 +/- 1.5 (jitter = 2.4)	0.000	0.000	0.000
+30	images/sec: 676.4 +/- 1.2 (jitter = 3.9)	0.000	0.000	0.000
+40	images/sec: 677.2 +/- 1.0 (jitter = 3.0)	0.000	0.000	0.000
+50	images/sec: 677.8 +/- 0.8 (jitter = 2.7)	0.000	0.000	0.000
+60	images/sec: 678.2 +/- 0.7 (jitter = 2.8)	0.000	0.000	0.000
+70	images/sec: 678.3 +/- 0.6 (jitter = 3.1)	0.000	0.000	0.000
+80	images/sec: 678.2 +/- 0.6 (jitter = 2.9)	0.000	0.000	0.000
+90	images/sec: 678.3 +/- 0.5 (jitter = 2.9)	0.000	0.000	0.000
+100	images/sec: 678.3 +/- 0.5 (jitter = 3.1)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 677.26
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 705.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.008
+10	images/sec: 707.5 +/- 0.6 (jitter = 2.1)	0.000	0.000	0.008
+20	images/sec: 707.4 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
+30	images/sec: 707.0 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.008
+40	images/sec: 706.6 +/- 0.3 (jitter = 1.8)	0.000	0.000	0.000
+50	images/sec: 706.3 +/- 0.4 (jitter = 1.9)	0.000	0.000	0.000
+60	images/sec: 706.6 +/- 0.4 (jitter = 1.8)	0.000	0.000	0.016
+70	images/sec: 706.7 +/- 0.3 (jitter = 2.2)	0.000	0.000	0.000
+80	images/sec: 706.6 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.000
+90	images/sec: 706.4 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.008
+100	images/sec: 706.0 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 705.18
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet152
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 260.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 261.4 +/- 0.4 (jitter = 1.4)	0.000	0.000	0.000
+20	images/sec: 262.3 +/- 0.4 (jitter = 1.9)	0.000	0.000	0.062
+30	images/sec: 262.3 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
+40	images/sec: 262.4 +/- 0.3 (jitter = 1.6)	0.000	0.000	0.000
+50	images/sec: 262.2 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
+60	images/sec: 262.2 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
+70	images/sec: 262.3 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
+80	images/sec: 262.4 +/- 0.2 (jitter = 1.6)	0.000	0.000	0.031
+90	images/sec: 262.4 +/- 0.2 (jitter = 1.5)	0.000	0.000	0.000
+100	images/sec: 262.5 +/- 0.2 (jitter = 1.5)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 262.07
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet152
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 280.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 280.5 +/- 0.5 (jitter = 0.9)	0.000	0.000	0.000
+20	images/sec: 280.8 +/- 0.3 (jitter = 0.8)	0.000	0.000	0.000
+30	images/sec: 280.3 +/- 0.3 (jitter = 0.8)	0.000	0.000	0.000
+40	images/sec: 280.2 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.000
+50	images/sec: 280.1 +/- 0.2 (jitter = 1.1)	0.000	0.000	0.016
+60	images/sec: 280.1 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.000
+70	images/sec: 280.0 +/- 0.1 (jitter = 1.0)	0.000	0.000	0.000
+80	images/sec: 279.7 +/- 0.2 (jitter = 1.1)	0.000	0.000	0.016
+90	images/sec: 279.4 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.016
+100	images/sec: 279.3 +/- 0.2 (jitter = 1.2)	0.000	0.016	0.016
+----------------------------------------------------------------
+total images/sec: 279.03
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       resnet152
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 292.1 +/- 0.0 (jitter = 0.0)	0.000	0.008	0.016
+10	images/sec: 291.4 +/- 0.2 (jitter = 0.7)	0.000	0.008	0.008
+20	images/sec: 291.8 +/- 0.2 (jitter = 0.9)	0.000	0.000	0.008
+30	images/sec: 291.8 +/- 0.1 (jitter = 0.7)	0.000	0.000	0.016
+40	images/sec: 291.8 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.000
+50	images/sec: 291.7 +/- 0.1 (jitter = 0.8)	0.000	0.000	0.000
+60	images/sec: 291.5 +/- 0.1 (jitter = 0.8)	0.000	0.000	0.016
+70	images/sec: 291.3 +/- 0.1 (jitter = 0.9)	0.000	0.008	0.016
+80	images/sec: 290.8 +/- 0.2 (jitter = 1.1)	0.000	0.008	0.008
+90	images/sec: 290.2 +/- 0.3 (jitter = 1.3)	0.000	0.000	0.016
+100	images/sec: 289.9 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 289.80
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 4628.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 4672.6 +/- 21.5 (jitter = 74.8)	0.000	0.000	0.000
+20	images/sec: 4656.4 +/- 22.0 (jitter = 68.6)	0.000	0.000	0.000
+30	images/sec: 4620.5 +/- 22.5 (jitter = 88.9)	0.000	0.000	0.000
+40	images/sec: 4626.5 +/- 18.1 (jitter = 87.4)	0.000	0.000	0.000
+50	images/sec: 4649.6 +/- 16.8 (jitter = 84.3)	0.000	0.000	0.000
+60	images/sec: 4675.5 +/- 17.4 (jitter = 105.6)	0.000	0.000	0.000
+70	images/sec: 4676.6 +/- 15.4 (jitter = 94.3)	0.000	0.000	0.000
+80	images/sec: 4683.2 +/- 13.9 (jitter = 95.8)	0.000	0.000	0.000
+90	images/sec: 4682.9 +/- 13.0 (jitter = 98.8)	0.000	0.000	0.000
+100	images/sec: 4629.8 +/- 28.4 (jitter = 95.9)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 4563.76
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 5978.0 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 5812.1 +/- 55.5 (jitter = 102.6)	0.000	0.000	0.000
+20	images/sec: 5869.2 +/- 31.5 (jitter = 72.8)	0.000	0.016	0.016
+30	images/sec: 5852.4 +/- 23.1 (jitter = 99.8)	0.000	0.000	0.000
+40	images/sec: 5855.5 +/- 18.3 (jitter = 89.7)	0.000	0.000	0.000
+50	images/sec: 5867.6 +/- 16.2 (jitter = 86.6)	0.000	0.000	0.000
+60	images/sec: 5874.9 +/- 14.0 (jitter = 84.9)	0.000	0.000	0.000
+70	images/sec: 5855.1 +/- 14.5 (jitter = 95.3)	0.000	0.000	0.000
+80	images/sec: 5839.0 +/- 13.7 (jitter = 120.8)	0.000	0.000	0.000
+90	images/sec: 5835.6 +/- 12.5 (jitter = 119.5)	0.000	0.000	0.000
+100	images/sec: 5829.0 +/- 11.9 (jitter = 115.9)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 5763.36
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 6240.6 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 6360.3 +/- 25.6 (jitter = 111.5)	0.000	0.000	0.000
+20	images/sec: 6365.7 +/- 16.9 (jitter = 75.9)	0.000	0.000	0.008
+30	images/sec: 6368.9 +/- 14.2 (jitter = 85.6)	0.000	0.008	0.008
+40	images/sec: 6363.6 +/- 11.4 (jitter = 73.4)	0.000	0.000	0.000
+50	images/sec: 6359.5 +/- 11.1 (jitter = 75.1)	0.000	0.000	0.000
+60	images/sec: 6363.7 +/- 9.9 (jitter = 78.0)	0.000	0.000	0.000
+70	images/sec: 6361.7 +/- 8.8 (jitter = 67.9)	0.000	0.000	0.008
+80	images/sec: 6360.4 +/- 8.0 (jitter = 71.5)	0.000	0.000	0.000
+90	images/sec: 6370.0 +/- 8.0 (jitter = 79.0)	0.000	0.000	0.000
+100	images/sec: 6376.3 +/- 7.6 (jitter = 86.1)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 6333.05
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       vgg16
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  32 global
+             32 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 407.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 405.1 +/- 0.9 (jitter = 2.6)	0.000	0.000	0.000
+20	images/sec: 405.3 +/- 0.6 (jitter = 2.1)	0.000	0.000	0.000
+30	images/sec: 405.3 +/- 0.4 (jitter = 2.5)	0.000	0.000	0.000
+40	images/sec: 405.0 +/- 0.7 (jitter = 2.5)	0.000	0.000	0.000
+50	images/sec: 404.9 +/- 0.7 (jitter = 2.6)	0.000	0.000	0.000
+60	images/sec: 405.0 +/- 0.6 (jitter = 2.6)	0.000	0.000	0.000
+70	images/sec: 405.2 +/- 0.5 (jitter = 2.5)	0.000	0.031	0.062
+80	images/sec: 405.3 +/- 0.4 (jitter = 2.7)	0.000	0.000	0.000
+90	images/sec: 405.3 +/- 0.4 (jitter = 2.6)	0.000	0.000	0.000
+100	images/sec: 405.2 +/- 0.4 (jitter = 2.5)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 404.34
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       vgg16
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 100
+Num epochs:  0.00
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 413.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
+10	images/sec: 416.3 +/- 1.0 (jitter = 2.9)	0.000	0.000	0.016
+20	images/sec: 414.9 +/- 1.0 (jitter = 2.7)	0.000	0.000	0.000
+30	images/sec: 415.0 +/- 0.7 (jitter = 3.1)	0.000	0.000	0.000
+40	images/sec: 414.9 +/- 0.6 (jitter = 3.0)	0.000	0.000	0.000
+50	images/sec: 414.8 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
+60	images/sec: 414.9 +/- 0.4 (jitter = 2.9)	0.000	0.000	0.000
+70	images/sec: 414.9 +/- 0.4 (jitter = 2.9)	0.000	0.000	0.000
+80	images/sec: 415.0 +/- 0.4 (jitter = 2.9)	0.000	0.000	0.016
+90	images/sec: 415.0 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.000
+100	images/sec: 415.1 +/- 0.3 (jitter = 2.9)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 414.56
+----------------------------------------------------------------
+TensorFlow:  1.10
+Model:       vgg16
+Dataset:     imagenet (synthetic)
+Mode:        forward-only
+SingleSess:  False
+Batch size:  128 global
+             128 per device
+Num batches: 100
+Num epochs:  0.01
+Devices:     ['/gpu:0']
+Data format: NCHW
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 416.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 416.3 +/- 0.6 (jitter = 2.0)	0.000	0.000	0.000
+20	images/sec: 416.1 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.008
+30	images/sec: 415.8 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.008
+40	images/sec: 415.7 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
+50	images/sec: 415.5 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.000
+60	images/sec: 415.2 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.016
+70	images/sec: 415.2 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.008
+80	images/sec: 415.1 +/- 0.3 (jitter = 2.7)	0.000	0.000	0.008
+90	images/sec: 415.1 +/- 0.2 (jitter = 2.5)	0.000	0.000	0.000
+100	images/sec: 414.9 +/- 0.2 (jitter = 2.7)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 414.72
+----------------------------------------------------------------

@@ -1,0 +1,47 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## GPU
+
+| Name | Version |
+|------|---------|
+|Cuda|                       9.0|
+|CuDNN|                      7.1|
+|GPU|                        GTX 1080ti|
+|TensorFlow|                 1.10|
+|Kernel Version|             3.10.0-862.11.6.el7.x86_64|
+|OS Image|                   CentOS Linux 7 (Core)|
+|Operating System|           linux|
+|Architecture|               amd64|
+|Container Runtime Version|  docker|//17.3.1|
+|Kubelet Version|            v1.10.1|
+|Kube-Proxy Version|         v1.10.1|
+
+### Single GPU
+
+#### Native
+
+[gpu_local_benchmark_single.log](./logs/gpu_local_benchmark_single.log)
+
+| Batch Size | InceptionV3 | ResNet-50 | ResNet-152 | AlexNet | VGG16  |
+|------------|-------------|-----------|------------|---------|--------|
+| 32         | 463.95      | 635.03    | 262.64     | 4501.43 | 404.17 |
+| 64         | 491.92      | 676.58    | 279.35     | 5770.26 | 415.27 |
+| 128        | 506.58      | 704.93    | 288.98     | 6333.50 | 414.57 |
+
+#### Dockerized
+
+
+### Double GPUs
+
+#### Native
+
+[gpu_local_benchmark_double.log](./logs/gpu_local_benchmark_double.log)
+
+| Batch Size (Per device) | InceptionV3 | ResNet-50 | ResNet-152 | AlexNet  | VGG16  |
+|-------------------------|-------------|-----------|------------|----------|--------|
+| 32                      | 815.82      | 1129.70   | 451.15     | 3291.85  | 766.47 |
+| 64                      | 918.02      | 1275.24   | 514.96     | 6491.45  | 817.34 |
+| 128                     | 975.54      | 1356.89   | 551.26     | 11702.10 | 818.00 |
