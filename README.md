@@ -4,7 +4,18 @@
 
 ### Local
 
-- Native and dockerized cnn benchmark
+- Native and dockerized cnn benchmark (1 GPU)
+- Native and dockerized cnn benchmark (2 GPUs)
+
+```bash
+$ docker build -t kubeflow/benchmarks .
+# Dockerized
+$ docker run -v $(pwd):/kubeflow-benchmarks kubeflow/benchmarks ./scripts/single.sh
+$ docker run -v $(pwd):/kubeflow-benchmarks kubeflow/benchmarks ./scripts/double.sh
+# Native
+$ ./scripts/single.sh
+$ ./scripts/double.sh
+```
 
 ### Distributed
 

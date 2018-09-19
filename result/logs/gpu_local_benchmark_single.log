@@ -1,3 +1,37 @@
+Start training inception3 {batch size = 32}
+W0919 11:09:13.943509 140359117776704 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:09:14.956162: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:09:15.424578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:15.625052: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:15.873923: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:16.074719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:16.077663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:09:19.255358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:09:19.255442: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:09:19.255488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:09:19.255509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:09:19.255537: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:09:19.255555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:09:19.257968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:09:19.478488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:09:19.764088: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:09:20.079754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:09:21.255980 140359117776704 tf_logging.py:115] Running local_init_op.
+I0919 11:09:21.299529 140359117776704 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       inception3
 Dataset:     imagenet (synthetic)
@@ -16,20 +50,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 464.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
-10	images/sec: 467.7 +/- 0.6 (jitter = 1.1)	0.000	0.000	0.000
-20	images/sec: 466.1 +/- 0.8 (jitter = 2.9)	0.000	0.000	0.000
-30	images/sec: 465.5 +/- 0.8 (jitter = 4.1)	0.000	0.000	0.000
-40	images/sec: 464.8 +/- 0.7 (jitter = 4.4)	0.000	0.000	0.000
-50	images/sec: 464.7 +/- 0.6 (jitter = 4.3)	0.000	0.000	0.000
-60	images/sec: 464.5 +/- 0.5 (jitter = 4.5)	0.000	0.000	0.000
-70	images/sec: 464.5 +/- 0.5 (jitter = 4.3)	0.000	0.000	0.000
-80	images/sec: 464.8 +/- 0.5 (jitter = 4.2)	0.000	0.000	0.000
-90	images/sec: 464.8 +/- 0.4 (jitter = 4.0)	0.000	0.000	0.000
-100	images/sec: 465.1 +/- 0.4 (jitter = 3.6)	0.000	0.000	0.031
+1	images/sec: 469.6 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 466.8 +/- 1.1 (jitter = 1.9)	0.000	0.000	0.000
+20	images/sec: 467.0 +/- 0.7 (jitter = 2.2)	0.000	0.000	0.000
+30	images/sec: 466.7 +/- 0.5 (jitter = 2.1)	0.000	0.000	0.000
+40	images/sec: 466.2 +/- 0.7 (jitter = 2.9)	0.000	0.000	0.000
+50	images/sec: 466.3 +/- 0.6 (jitter = 2.3)	0.000	0.000	0.000
+60	images/sec: 466.5 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.000
+70	images/sec: 466.2 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.031
+80	images/sec: 466.1 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.000
+90	images/sec: 465.9 +/- 0.4 (jitter = 2.3)	0.000	0.000	0.000
+100	images/sec: 466.0 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 463.95
+total images/sec: 464.98
 ----------------------------------------------------------------
+Stop training inception3 {batch_size = 32}
+Start training inception3 {batch size = 64}
+W0919 11:09:40.332375 139845529769792 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:09:41.228529: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:09:41.641028: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:41.835166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:42.019797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:42.251797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:09:42.255644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:09:44.050177: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:09:44.050245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:09:44.050280: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:09:44.050294: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:09:44.050354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:09:44.050364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:09:44.051663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:09:44.282531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:09:44.554850: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:09:44.800927: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:09:45.875319 139845529769792 tf_logging.py:115] Running local_init_op.
+I0919 11:09:45.918100 139845529769792 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       inception3
 Dataset:     imagenet (synthetic)
@@ -48,20 +117,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 495.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 493.3 +/- 0.5 (jitter = 1.4)	0.000	0.000	0.000
-20	images/sec: 492.7 +/- 0.6 (jitter = 2.1)	0.000	0.000	0.016
-30	images/sec: 492.7 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.016
-40	images/sec: 493.0 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.000
-50	images/sec: 492.7 +/- 0.4 (jitter = 2.0)	0.000	0.000	0.016
-60	images/sec: 492.7 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.000
-70	images/sec: 492.9 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.031
-80	images/sec: 492.7 +/- 0.3 (jitter = 1.9)	0.000	0.000	0.000
-90	images/sec: 492.6 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.016
-100	images/sec: 492.6 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
+1	images/sec: 495.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
+10	images/sec: 493.6 +/- 1.0 (jitter = 1.6)	0.000	0.000	0.000
+20	images/sec: 493.9 +/- 0.6 (jitter = 1.7)	0.000	0.000	0.000
+30	images/sec: 494.0 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.000
+40	images/sec: 494.0 +/- 0.3 (jitter = 1.5)	0.000	0.000	0.000
+50	images/sec: 494.2 +/- 0.3 (jitter = 1.5)	0.000	0.000	0.000
+60	images/sec: 494.0 +/- 0.4 (jitter = 1.4)	0.000	0.000	0.016
+70	images/sec: 493.8 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.000
+80	images/sec: 493.7 +/- 0.4 (jitter = 1.6)	0.000	0.000	0.000
+90	images/sec: 493.6 +/- 0.3 (jitter = 1.6)	0.000	0.000	0.000
+100	images/sec: 493.5 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 491.92
+total images/sec: 489.08
 ----------------------------------------------------------------
+Stop training inception3 {batch_size = 64}
+Start training inception3 {batch size = 128}
+W0919 11:10:10.042371 139706148861760 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:10:11.049896: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:10:11.483669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:11.666386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:11.847354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:12.057030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:12.060906: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:10:13.842748: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:10:13.842815: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:10:13.842831: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:10:13.842844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:10:13.842855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:10:13.842869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:10:13.844198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:10:14.079440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:10:14.327654: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:10:14.646237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:10:16.113420 139706148861760 tf_logging.py:115] Running local_init_op.
+I0919 11:10:16.159044 139706148861760 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       inception3
 Dataset:     imagenet (synthetic)
@@ -80,20 +184,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 507.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
-10	images/sec: 509.9 +/- 0.4 (jitter = 1.0)	0.000	0.000	0.000
-20	images/sec: 509.2 +/- 0.5 (jitter = 2.0)	0.000	0.008	0.008
-30	images/sec: 508.7 +/- 0.4 (jitter = 2.3)	0.000	0.000	0.000
-40	images/sec: 508.6 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
-50	images/sec: 508.4 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.000
-60	images/sec: 508.1 +/- 0.3 (jitter = 2.3)	0.000	0.008	0.008
-70	images/sec: 507.8 +/- 0.3 (jitter = 2.6)	0.000	0.008	0.016
-80	images/sec: 507.6 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.008
-90	images/sec: 507.3 +/- 0.3 (jitter = 2.4)	0.000	0.000	0.000
-100	images/sec: 507.0 +/- 0.3 (jitter = 2.6)	0.000	0.000	0.000
+1	images/sec: 510.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 509.7 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.008
+20	images/sec: 509.7 +/- 0.2 (jitter = 0.8)	0.000	0.008	0.008
+30	images/sec: 509.5 +/- 0.2 (jitter = 0.9)	0.000	0.008	0.008
+40	images/sec: 509.2 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.016
+50	images/sec: 508.5 +/- 0.3 (jitter = 1.1)	0.000	0.000	0.000
+60	images/sec: 508.1 +/- 0.3 (jitter = 1.4)	0.000	0.000	0.008
+70	images/sec: 507.9 +/- 0.3 (jitter = 1.6)	0.000	0.000	0.000
+80	images/sec: 507.7 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.008
+90	images/sec: 507.6 +/- 0.2 (jitter = 2.1)	0.000	0.000	0.000
+100	images/sec: 507.3 +/- 0.3 (jitter = 2.4)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 506.58
+total images/sec: 507.05
 ----------------------------------------------------------------
+Stop training inception3 {batch_size = 128}
+Start training resnet50 {batch size = 32}
+W0919 11:10:53.308592 140131457296192 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:10:53.809647: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:10:54.233626: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:54.438102: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:54.611116: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:54.789766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:10:54.792161: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:10:56.558432: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:10:56.558503: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:10:56.558519: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:10:56.558531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:10:56.558542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:10:56.558560: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:10:56.559727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:10:56.786485: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:10:57.011183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:10:57.258628: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:10:58.245892 140131457296192 tf_logging.py:115] Running local_init_op.
+I0919 11:10:58.275614 140131457296192 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       resnet50
 Dataset:     imagenet (synthetic)
@@ -112,20 +251,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 644.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 639.0 +/- 1.1 (jitter = 2.8)	0.000	0.000	0.031
-20	images/sec: 638.0 +/- 0.7 (jitter = 2.8)	0.000	0.000	0.000
-30	images/sec: 637.5 +/- 0.6 (jitter = 3.3)	0.000	0.000	0.000
-40	images/sec: 637.2 +/- 0.7 (jitter = 3.7)	0.000	0.000	0.000
-50	images/sec: 638.0 +/- 0.7 (jitter = 4.5)	0.000	0.000	0.000
-60	images/sec: 637.2 +/- 0.8 (jitter = 4.7)	0.000	0.000	0.000
-70	images/sec: 636.3 +/- 0.9 (jitter = 4.7)	0.000	0.000	0.000
-80	images/sec: 636.5 +/- 0.8 (jitter = 5.2)	0.000	0.000	0.031
-90	images/sec: 636.8 +/- 0.7 (jitter = 5.3)	0.000	0.000	0.000
-100	images/sec: 637.0 +/- 0.7 (jitter = 5.4)	0.000	0.000	0.000
+1	images/sec: 638.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 636.3 +/- 0.4 (jitter = 1.5)	0.000	0.000	0.000
+20	images/sec: 635.1 +/- 0.5 (jitter = 2.3)	0.000	0.000	0.000
+30	images/sec: 634.2 +/- 1.9 (jitter = 3.4)	0.000	0.000	0.000
+40	images/sec: 631.6 +/- 1.8 (jitter = 4.4)	0.000	0.000	0.000
+50	images/sec: 632.5 +/- 1.4 (jitter = 4.1)	0.000	0.000	0.000
+60	images/sec: 633.4 +/- 1.2 (jitter = 4.0)	0.000	0.000	0.000
+70	images/sec: 633.6 +/- 1.1 (jitter = 3.5)	0.000	0.000	0.000
+80	images/sec: 633.2 +/- 1.1 (jitter = 3.7)	0.000	0.000	0.031
+90	images/sec: 633.4 +/- 1.0 (jitter = 3.7)	0.000	0.000	0.000
+100	images/sec: 633.5 +/- 0.9 (jitter = 3.7)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 635.03
+total images/sec: 632.21
 ----------------------------------------------------------------
+Stop training resnet50 {batch_size = 32}
+Start training resnet50 {batch size = 64}
+W0919 11:11:11.809828 140234634151744 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:11:12.464882: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:11:12.885903: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:13.078844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:13.281127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:13.452933: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:13.456897: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:11:15.206461: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:11:15.206529: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:11:15.206542: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:11:15.206550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:11:15.206572: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:11:15.206581: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:11:15.207723: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:11:15.430306: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:11:15.664494: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:11:15.905855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:11:16.732592 140234634151744 tf_logging.py:115] Running local_init_op.
+I0919 11:11:16.764379 140234634151744 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       resnet50
 Dataset:     imagenet (synthetic)
@@ -144,20 +318,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 676.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 677.3 +/- 1.2 (jitter = 5.1)	0.000	0.000	0.016
-20	images/sec: 676.3 +/- 0.9 (jitter = 5.3)	0.000	0.000	0.000
-30	images/sec: 677.4 +/- 0.7 (jitter = 3.6)	0.000	0.000	0.000
-40	images/sec: 678.0 +/- 0.6 (jitter = 3.4)	0.000	0.000	0.000
-50	images/sec: 677.2 +/- 1.1 (jitter = 4.1)	0.000	0.000	0.000
-60	images/sec: 677.4 +/- 0.9 (jitter = 4.4)	0.000	0.000	0.000
-70	images/sec: 677.4 +/- 0.8 (jitter = 4.1)	0.000	0.000	0.000
-80	images/sec: 677.4 +/- 0.8 (jitter = 4.2)	0.000	0.000	0.000
-90	images/sec: 677.6 +/- 0.7 (jitter = 4.2)	0.000	0.000	0.000
-100	images/sec: 677.6 +/- 0.6 (jitter = 4.0)	0.000	0.000	0.000
+1	images/sec: 684.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 681.5 +/- 1.4 (jitter = 3.9)	0.000	0.000	0.000
+20	images/sec: 679.6 +/- 1.7 (jitter = 2.0)	0.000	0.000	0.000
+30	images/sec: 680.6 +/- 1.2 (jitter = 3.3)	0.000	0.000	0.000
+40	images/sec: 680.2 +/- 1.1 (jitter = 3.3)	0.000	0.000	0.000
+50	images/sec: 680.6 +/- 0.9 (jitter = 2.9)	0.000	0.000	0.031
+60	images/sec: 681.2 +/- 0.8 (jitter = 2.8)	0.000	0.000	0.000
+70	images/sec: 681.2 +/- 0.8 (jitter = 3.1)	0.000	0.000	0.016
+80	images/sec: 681.2 +/- 0.7 (jitter = 3.1)	0.000	0.000	0.000
+90	images/sec: 681.1 +/- 0.6 (jitter = 3.2)	0.000	0.000	0.000
+100	images/sec: 681.1 +/- 0.6 (jitter = 3.2)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 676.58
+total images/sec: 680.35
 ----------------------------------------------------------------
+Stop training resnet50 {batch_size = 64}
+Start training resnet50 {batch size = 128}
+W0919 11:11:34.819066 140605780424512 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:11:35.328095: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:11:35.757211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:35.965678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:36.142554: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:36.325183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:11:36.327829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:11:37.959862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:11:37.959932: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:11:37.959948: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:11:37.959961: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:11:37.959976: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:11:37.959985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:11:37.961147: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:11:38.181409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:11:38.409262: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:11:38.710947: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:11:39.569283 140605780424512 tf_logging.py:115] Running local_init_op.
+I0919 11:11:39.598906 140605780424512 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       resnet50
 Dataset:     imagenet (synthetic)
@@ -176,20 +385,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 710.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.008
-10	images/sec: 706.8 +/- 1.5 (jitter = 1.7)	0.000	0.000	0.008
-20	images/sec: 707.6 +/- 0.9 (jitter = 2.2)	0.000	0.000	0.000
-30	images/sec: 706.6 +/- 0.7 (jitter = 3.8)	0.000	0.000	0.008
-40	images/sec: 706.8 +/- 0.6 (jitter = 3.5)	0.000	0.000	0.000
-50	images/sec: 706.8 +/- 0.5 (jitter = 3.3)	0.000	0.000	0.000
-60	images/sec: 706.5 +/- 0.4 (jitter = 3.4)	0.000	0.000	0.016
-70	images/sec: 706.2 +/- 0.4 (jitter = 3.0)	0.000	0.000	0.000
-80	images/sec: 705.7 +/- 0.5 (jitter = 2.9)	0.000	0.000	0.000
-90	images/sec: 705.6 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.008
-100	images/sec: 705.6 +/- 0.4 (jitter = 2.6)	0.000	0.000	0.000
+1	images/sec: 708.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.008
+10	images/sec: 706.0 +/- 0.9 (jitter = 4.3)	0.000	0.000	0.008
+20	images/sec: 706.1 +/- 0.6 (jitter = 3.7)	0.000	0.000	0.000
+30	images/sec: 706.1 +/- 0.5 (jitter = 3.6)	0.000	0.000	0.008
+40	images/sec: 706.2 +/- 0.4 (jitter = 3.4)	0.000	0.000	0.000
+50	images/sec: 706.1 +/- 0.3 (jitter = 3.1)	0.000	0.000	0.000
+60	images/sec: 705.8 +/- 0.4 (jitter = 3.3)	0.000	0.000	0.000
+70	images/sec: 705.7 +/- 0.4 (jitter = 3.1)	0.000	0.000	0.008
+80	images/sec: 705.6 +/- 0.3 (jitter = 2.9)	0.000	0.000	0.008
+90	images/sec: 705.3 +/- 0.4 (jitter = 2.7)	0.000	0.000	0.008
+100	images/sec: 705.2 +/- 0.4 (jitter = 2.8)	0.000	0.000	0.008
 ----------------------------------------------------------------
-total images/sec: 704.93
+total images/sec: 704.69
 ----------------------------------------------------------------
+Stop training resnet50 {batch_size = 128}
+Start training resnet152 {batch size = 32}
+W0919 11:12:12.498961 139880289888064 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:12:14.297688: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:12:14.721925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:14.884689: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:15.074028: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:15.265704: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:15.268966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:12:17.092880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:12:17.092945: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:12:17.092958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:12:17.092967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:12:17.092977: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:12:17.092985: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:12:17.094204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:12:17.369470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:12:17.674663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:12:17.992437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:12:20.191430 139880289888064 tf_logging.py:115] Running local_init_op.
+I0919 11:12:20.267302 139880289888064 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       resnet152
 Dataset:     imagenet (synthetic)
@@ -208,20 +452,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 263.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 263.2 +/- 0.3 (jitter = 0.8)	0.000	0.000	0.000
-20	images/sec: 263.0 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.062
-30	images/sec: 263.1 +/- 0.3 (jitter = 1.3)	0.000	0.000	0.000
-40	images/sec: 263.3 +/- 0.2 (jitter = 1.1)	0.000	0.000	0.000
-50	images/sec: 263.6 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.000
-60	images/sec: 263.6 +/- 0.2 (jitter = 1.3)	0.000	0.000	0.000
-70	images/sec: 263.5 +/- 0.2 (jitter = 1.3)	0.000	0.000	0.000
-80	images/sec: 263.4 +/- 0.2 (jitter = 1.4)	0.000	0.000	0.031
-90	images/sec: 263.2 +/- 0.2 (jitter = 1.4)	0.000	0.000	0.000
-100	images/sec: 263.0 +/- 0.2 (jitter = 1.6)	0.000	0.000	0.000
+1	images/sec: 266.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 264.1 +/- 1.7 (jitter = 0.5)	0.000	0.000	0.000
+20	images/sec: 265.0 +/- 0.9 (jitter = 1.0)	0.000	0.000	0.031
+30	images/sec: 265.3 +/- 0.6 (jitter = 1.1)	0.000	0.000	0.000
+40	images/sec: 265.3 +/- 0.5 (jitter = 1.1)	0.000	0.000	0.000
+50	images/sec: 264.8 +/- 0.6 (jitter = 1.2)	0.000	0.000	0.000
+60	images/sec: 265.0 +/- 0.5 (jitter = 1.2)	0.000	0.000	0.000
+70	images/sec: 264.7 +/- 0.5 (jitter = 1.1)	0.000	0.000	0.000
+80	images/sec: 264.7 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.000
+90	images/sec: 264.7 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.000
+100	images/sec: 264.7 +/- 0.3 (jitter = 1.2)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 262.64
+total images/sec: 264.50
 ----------------------------------------------------------------
+Stop training resnet152 {batch_size = 32}
+Start training resnet152 {batch size = 64}
+W0919 11:12:47.901820 140223940245312 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:12:49.604121: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:12:50.112670: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:50.317411: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:50.503027: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:50.698555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:12:50.701441: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:12:52.482681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:12:52.482739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:12:52.482756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:12:52.482770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:12:52.482781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:12:52.482793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:12:52.483914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:12:52.715906: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:12:52.940686: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:12:53.234756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:12:55.796111 140223940245312 tf_logging.py:115] Running local_init_op.
+I0919 11:12:55.902703 140223940245312 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       resnet152
 Dataset:     imagenet (synthetic)
@@ -240,20 +519,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 280.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 280.5 +/- 0.1 (jitter = 0.4)	0.000	0.000	0.000
-20	images/sec: 280.4 +/- 0.1 (jitter = 0.7)	0.000	0.000	0.000
-30	images/sec: 280.1 +/- 0.1 (jitter = 0.9)	0.000	0.000	0.000
-40	images/sec: 280.0 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.000
-50	images/sec: 279.9 +/- 0.3 (jitter = 0.9)	0.000	0.000	0.016
-60	images/sec: 279.7 +/- 0.3 (jitter = 1.1)	0.000	0.000	0.000
-70	images/sec: 279.7 +/- 0.3 (jitter = 1.1)	0.000	0.000	0.000
-80	images/sec: 279.7 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.016
-90	images/sec: 279.7 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.016
-100	images/sec: 279.6 +/- 0.2 (jitter = 1.2)	0.000	0.016	0.016
+1	images/sec: 283.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 281.9 +/- 0.4 (jitter = 1.2)	0.000	0.000	0.000
+20	images/sec: 282.3 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.000
+30	images/sec: 282.2 +/- 0.2 (jitter = 0.9)	0.000	0.000	0.031
+40	images/sec: 282.1 +/- 0.1 (jitter = 0.7)	0.000	0.000	0.000
+50	images/sec: 281.8 +/- 0.2 (jitter = 0.7)	0.000	0.016	0.016
+60	images/sec: 281.8 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.016
+70	images/sec: 281.8 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.016
+80	images/sec: 281.6 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.000
+90	images/sec: 281.5 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.000
+100	images/sec: 281.5 +/- 0.2 (jitter = 0.8)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 279.35
+total images/sec: 281.36
 ----------------------------------------------------------------
+Stop training resnet152 {batch_size = 64}
+Start training resnet152 {batch size = 128}
+W0919 11:13:35.350888 139800727009088 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:13:37.054377: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:13:37.478967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:13:37.682576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:13:37.875863: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:13:38.066537: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:13:38.069352: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:13:39.891097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:13:39.891154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:13:39.891170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:13:39.891193: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:13:39.891203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:13:39.891212: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:13:39.892230: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:13:40.127280: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:13:40.357348: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:13:40.588750: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:13:42.644471 139800727009088 tf_logging.py:115] Running local_init_op.
+I0919 11:13:42.757400 139800727009088 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       resnet152
 Dataset:     imagenet (synthetic)
@@ -272,20 +586,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 289.8 +/- 0.0 (jitter = 0.0)	0.000	0.008	0.016
-10	images/sec: 291.5 +/- 0.3 (jitter = 0.9)	0.000	0.008	0.008
-20	images/sec: 291.7 +/- 0.2 (jitter = 0.6)	0.000	0.000	0.008
-30	images/sec: 291.7 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.016
-40	images/sec: 291.5 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.000
-50	images/sec: 291.5 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.000
-60	images/sec: 291.4 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.016
-70	images/sec: 290.6 +/- 0.3 (jitter = 0.8)	0.000	0.008	0.016
-80	images/sec: 289.7 +/- 0.4 (jitter = 1.1)	0.000	0.008	0.008
-90	images/sec: 289.1 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.016
-100	images/sec: 289.1 +/- 0.4 (jitter = 1.3)	0.000	0.000	0.000
+1	images/sec: 290.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 291.8 +/- 0.4 (jitter = 1.5)	0.000	0.008	0.008
+20	images/sec: 292.2 +/- 0.2 (jitter = 0.9)	0.000	0.000	0.000
+30	images/sec: 292.2 +/- 0.2 (jitter = 0.9)	0.000	0.000	0.008
+40	images/sec: 292.2 +/- 0.1 (jitter = 0.8)	0.000	0.000	0.008
+50	images/sec: 292.1 +/- 0.1 (jitter = 0.7)	0.000	0.000	0.000
+60	images/sec: 291.9 +/- 0.1 (jitter = 0.8)	0.000	0.000	0.008
+70	images/sec: 291.1 +/- 0.3 (jitter = 1.1)	0.000	0.016	0.016
+80	images/sec: 290.5 +/- 0.3 (jitter = 1.4)	0.000	0.000	0.000
+90	images/sec: 289.8 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.000
+100	images/sec: 289.6 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 288.98
+total images/sec: 289.47
 ----------------------------------------------------------------
+Stop training resnet152 {batch_size = 128}
+Start training alexnet {batch size = 32}
+W0919 11:14:38.811621 139872383825728 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:14:38.881926: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:14:39.283450: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:39.469615: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:39.660210: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:39.848684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:39.851489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:14:41.621615: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:14:41.621675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:14:41.621690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:14:41.621701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:14:41.621713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:14:41.621724: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:14:41.622978: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:14:41.878640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:14:42.120421: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:14:42.355583: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:14:42.651907 139872383825728 tf_logging.py:115] Running local_init_op.
+I0919 11:14:42.663814 139872383825728 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       alexnet
 Dataset:     imagenet (synthetic)
@@ -304,20 +653,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 4639.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 4500.4 +/- 31.9 (jitter = 112.2)	0.000	0.000	0.000
-20	images/sec: 4573.9 +/- 24.0 (jitter = 64.5)	0.000	0.000	0.000
-30	images/sec: 4557.0 +/- 17.1 (jitter = 103.4)	0.000	0.000	0.000
-40	images/sec: 4557.6 +/- 15.1 (jitter = 103.2)	0.000	0.000	0.000
-50	images/sec: 4555.6 +/- 14.1 (jitter = 106.2)	0.000	0.000	0.000
-60	images/sec: 4542.7 +/- 16.8 (jitter = 100.9)	0.000	0.000	0.000
-70	images/sec: 4558.3 +/- 15.5 (jitter = 98.4)	0.000	0.000	0.000
-80	images/sec: 4574.3 +/- 15.0 (jitter = 100.4)	0.000	0.000	0.000
-90	images/sec: 4571.1 +/- 13.5 (jitter = 95.5)	0.000	0.000	0.000
-100	images/sec: 4569.9 +/- 13.0 (jitter = 100.4)	0.000	0.000	0.000
+1	images/sec: 4621.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 4661.1 +/- 15.2 (jitter = 43.1)	0.000	0.000	0.000
+20	images/sec: 4755.1 +/- 24.4 (jitter = 141.8)	0.000	0.000	0.000
+30	images/sec: 4756.9 +/- 21.3 (jitter = 137.7)	0.000	0.000	0.000
+40	images/sec: 4787.6 +/- 19.4 (jitter = 111.0)	0.000	0.000	0.000
+50	images/sec: 4818.9 +/- 18.6 (jitter = 116.1)	0.000	0.000	0.031
+60	images/sec: 4792.5 +/- 35.8 (jitter = 131.1)	0.000	0.000	0.000
+70	images/sec: 4815.0 +/- 31.7 (jitter = 117.7)	0.000	0.031	0.031
+80	images/sec: 4848.0 +/- 29.4 (jitter = 139.2)	0.000	0.000	0.000
+90	images/sec: 4872.0 +/- 27.1 (jitter = 162.5)	0.000	0.000	0.000
+100	images/sec: 4890.6 +/- 25.0 (jitter = 171.8)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 4501.43
+total images/sec: 4840.97
 ----------------------------------------------------------------
+Stop training alexnet {batch_size = 32}
+Start training alexnet {batch size = 64}
+W0919 11:14:47.755497 140478686533440 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:14:47.826316: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:14:48.239603: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:48.415571: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:48.599347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:48.789147: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:48.791790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:14:50.579177: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:14:50.579237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:14:50.579251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:14:50.579262: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:14:50.579271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:14:50.579332: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:14:50.580629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:14:50.833352: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:14:51.097068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:14:51.357133: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:14:51.643675 140478686533440 tf_logging.py:115] Running local_init_op.
+I0919 11:14:51.655308 140478686533440 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       alexnet
 Dataset:     imagenet (synthetic)
@@ -336,20 +720,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 5881.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 5723.1 +/- 49.1 (jitter = 171.8)	0.000	0.000	0.000
-20	images/sec: 5690.8 +/- 29.1 (jitter = 131.9)	0.000	0.016	0.016
-30	images/sec: 5713.6 +/- 25.4 (jitter = 158.5)	0.000	0.000	0.000
-40	images/sec: 5760.1 +/- 25.0 (jitter = 181.4)	0.000	0.000	0.000
-50	images/sec: 5787.5 +/- 22.0 (jitter = 185.4)	0.000	0.000	0.000
-60	images/sec: 5797.2 +/- 18.7 (jitter = 163.0)	0.000	0.000	0.000
-70	images/sec: 5807.9 +/- 16.7 (jitter = 142.5)	0.000	0.000	0.000
-80	images/sec: 5813.9 +/- 15.0 (jitter = 131.2)	0.000	0.000	0.000
-90	images/sec: 5827.0 +/- 14.1 (jitter = 122.6)	0.000	0.000	0.000
-100	images/sec: 5835.6 +/- 13.0 (jitter = 104.5)	0.000	0.000	0.000
+1	images/sec: 6029.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+10	images/sec: 5958.0 +/- 25.4 (jitter = 48.3)	0.000	0.000	0.000
+20	images/sec: 6054.5 +/- 27.4 (jitter = 153.7)	0.000	0.000	0.016
+30	images/sec: 6068.6 +/- 20.3 (jitter = 126.7)	0.000	0.000	0.000
+40	images/sec: 6080.3 +/- 16.1 (jitter = 92.7)	0.000	0.000	0.000
+50	images/sec: 6091.2 +/- 13.9 (jitter = 86.2)	0.000	0.000	0.031
+60	images/sec: 6091.3 +/- 12.7 (jitter = 87.5)	0.000	0.000	0.000
+70	images/sec: 6087.4 +/- 11.7 (jitter = 84.1)	0.000	0.000	0.000
+80	images/sec: 6080.1 +/- 11.4 (jitter = 86.2)	0.000	0.016	0.047
+90	images/sec: 6083.3 +/- 10.9 (jitter = 104.3)	0.000	0.000	0.000
+100	images/sec: 6061.8 +/- 13.1 (jitter = 105.5)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 5770.26
+total images/sec: 6014.73
 ----------------------------------------------------------------
+Stop training alexnet {batch_size = 64}
+Start training alexnet {batch size = 128}
+W0919 11:14:57.280738 140309123082048 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:14:57.343879: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:14:57.734823: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:57.900259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:58.068339: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:58.291639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:14:58.294531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:14:59.986111: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:14:59.986190: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:14:59.986205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:14:59.986217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:14:59.986227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:14:59.986237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:14:59.987576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:15:00.240810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:15:00.505319: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:15:00.758371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:15:01.126177 140309123082048 tf_logging.py:115] Running local_init_op.
+I0919 11:15:01.138093 140309123082048 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       alexnet
 Dataset:     imagenet (synthetic)
@@ -368,20 +787,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 6473.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 6410.9 +/- 19.9 (jitter = 79.5)	0.000	0.000	0.000
-20	images/sec: 6415.3 +/- 14.8 (jitter = 67.7)	0.000	0.000	0.008
-30	images/sec: 6408.8 +/- 11.5 (jitter = 68.3)	0.000	0.008	0.008
-40	images/sec: 6413.2 +/- 9.3 (jitter = 62.1)	0.000	0.000	0.000
-50	images/sec: 6395.5 +/- 11.1 (jitter = 71.8)	0.000	0.000	0.000
-60	images/sec: 6390.7 +/- 9.9 (jitter = 74.1)	0.000	0.000	0.000
-70	images/sec: 6380.3 +/- 10.7 (jitter = 87.2)	0.000	0.000	0.008
-80	images/sec: 6385.3 +/- 9.8 (jitter = 74.8)	0.000	0.000	0.000
-90	images/sec: 6376.9 +/- 10.3 (jitter = 82.7)	0.000	0.000	0.000
-100	images/sec: 6375.2 +/- 9.6 (jitter = 85.2)	0.000	0.000	0.000
+1	images/sec: 6455.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 6491.2 +/- 22.3 (jitter = 83.1)	0.000	0.000	0.000
+20	images/sec: 6502.6 +/- 16.5 (jitter = 61.7)	0.000	0.000	0.008
+30	images/sec: 6520.6 +/- 13.6 (jitter = 72.2)	0.000	0.000	0.008
+40	images/sec: 6521.9 +/- 10.9 (jitter = 60.4)	0.000	0.000	0.000
+50	images/sec: 6522.0 +/- 9.6 (jitter = 64.4)	0.000	0.000	0.008
+60	images/sec: 6513.5 +/- 10.1 (jitter = 63.9)	0.000	0.000	0.000
+70	images/sec: 6530.6 +/- 10.1 (jitter = 73.9)	0.000	0.000	0.000
+80	images/sec: 6533.1 +/- 9.0 (jitter = 65.0)	0.000	0.000	0.000
+90	images/sec: 6532.2 +/- 8.2 (jitter = 63.0)	0.000	0.000	0.000
+100	images/sec: 6533.6 +/- 7.7 (jitter = 63.0)	0.000	0.000	0.008
 ----------------------------------------------------------------
-total images/sec: 6333.50
+total images/sec: 6504.70
 ----------------------------------------------------------------
+Stop training alexnet {batch_size = 128}
+Start training vgg16 {batch size = 32}
+W0919 11:15:08.281342 140498650761024 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:15:08.389954: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:15:08.811012: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:08.996122: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:09.215041: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:09.410582: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:09.413790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:15:11.166701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:15:11.166751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:15:11.166766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:15:11.166776: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:15:11.166806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:15:11.166816: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:15:11.167979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:15:11.402590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:15:11.635403: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:15:11.868758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:15:12.222697 140498650761024 tf_logging.py:115] Running local_init_op.
+I0919 11:15:12.248225 140498650761024 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       vgg16
 Dataset:     imagenet (synthetic)
@@ -400,20 +854,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 406.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 404.9 +/- 0.7 (jitter = 2.6)	0.000	0.000	0.000
-20	images/sec: 405.3 +/- 0.5 (jitter = 2.5)	0.000	0.000	0.000
-30	images/sec: 405.6 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
-40	images/sec: 405.4 +/- 0.3 (jitter = 1.8)	0.000	0.000	0.000
-50	images/sec: 405.0 +/- 0.5 (jitter = 2.1)	0.000	0.000	0.000
-60	images/sec: 405.2 +/- 0.4 (jitter = 2.1)	0.000	0.000	0.000
-70	images/sec: 405.4 +/- 0.4 (jitter = 2.2)	0.000	0.031	0.062
-80	images/sec: 405.3 +/- 0.4 (jitter = 1.9)	0.000	0.000	0.000
-90	images/sec: 405.2 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
-100	images/sec: 405.0 +/- 0.3 (jitter = 2.2)	0.000	0.000	0.000
+1	images/sec: 410.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 407.9 +/- 1.1 (jitter = 5.2)	0.000	0.000	0.000
+20	images/sec: 409.3 +/- 0.7 (jitter = 3.0)	0.000	0.000	0.000
+30	images/sec: 408.3 +/- 0.7 (jitter = 3.7)	0.000	0.000	0.000
+40	images/sec: 408.4 +/- 0.6 (jitter = 3.1)	0.000	0.000	0.031
+50	images/sec: 408.2 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
+60	images/sec: 408.4 +/- 0.4 (jitter = 2.5)	0.000	0.000	0.000
+70	images/sec: 408.4 +/- 0.4 (jitter = 2.8)	0.000	0.000	0.000
+80	images/sec: 408.5 +/- 0.3 (jitter = 2.7)	0.000	0.000	0.000
+90	images/sec: 408.4 +/- 0.3 (jitter = 2.6)	0.000	0.000	0.000
+100	images/sec: 408.4 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 404.17
+total images/sec: 407.86
 ----------------------------------------------------------------
+Stop training vgg16 {batch_size = 32}
+Start training vgg16 {batch size = 64}
+W0919 11:15:26.286834 140684927145792 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:15:26.391056: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:15:26.820780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:27.000143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:27.171180: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:27.353833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:27.356677: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:15:29.116561: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:15:29.116634: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:15:29.116648: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:15:29.116659: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:15:29.116684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:15:29.116693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:15:29.118161: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:15:29.360671: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:15:29.616735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:15:29.865586: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:15:30.201875 140684927145792 tf_logging.py:115] Running local_init_op.
+I0919 11:15:30.228157 140684927145792 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       vgg16
 Dataset:     imagenet (synthetic)
@@ -432,20 +921,55 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 418.0 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
-10	images/sec: 416.6 +/- 0.8 (jitter = 2.0)	0.000	0.000	0.016
-20	images/sec: 416.3 +/- 0.5 (jitter = 2.2)	0.000	0.000	0.000
-30	images/sec: 417.1 +/- 0.5 (jitter = 2.3)	0.000	0.000	0.000
-40	images/sec: 416.8 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
-50	images/sec: 416.5 +/- 0.4 (jitter = 3.2)	0.000	0.000	0.000
-60	images/sec: 416.3 +/- 0.4 (jitter = 3.1)	0.000	0.000	0.000
-70	images/sec: 416.2 +/- 0.4 (jitter = 3.5)	0.000	0.000	0.000
-80	images/sec: 415.9 +/- 0.3 (jitter = 3.5)	0.000	0.000	0.016
-90	images/sec: 415.9 +/- 0.3 (jitter = 3.3)	0.000	0.000	0.000
-100	images/sec: 415.7 +/- 0.3 (jitter = 3.3)	0.000	0.000	0.000
+1	images/sec: 420.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 417.3 +/- 1.0 (jitter = 4.4)	0.000	0.000	0.000
+20	images/sec: 417.3 +/- 0.5 (jitter = 2.5)	0.000	0.000	0.000
+30	images/sec: 417.3 +/- 0.5 (jitter = 2.5)	0.000	0.000	0.000
+40	images/sec: 417.2 +/- 0.4 (jitter = 2.6)	0.000	0.000	0.000
+50	images/sec: 417.4 +/- 0.3 (jitter = 2.2)	0.000	0.000	0.000
+60	images/sec: 417.3 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.031
+70	images/sec: 417.2 +/- 0.3 (jitter = 2.4)	0.000	0.000	0.000
+80	images/sec: 417.1 +/- 0.3 (jitter = 2.4)	0.000	0.000	0.000
+90	images/sec: 416.9 +/- 0.3 (jitter = 3.0)	0.000	0.000	0.016
+100	images/sec: 416.8 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.000
 ----------------------------------------------------------------
-total images/sec: 415.27
+total images/sec: 416.51
 ----------------------------------------------------------------
+Stop training vgg16 {batch_size = 64}
+Start training vgg16 {batch size = 128}
+W0919 11:15:52.938369 140714015758144 tf_logging.py:125] From /root/code/kubeflow-benchmarks/tf-benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:1845: __init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2018-09-19 11:15:53.042361: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-09-19 11:15:53.447813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:53.630303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:53.819055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:54.010662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2018-09-19 11:15:54.013210: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2, 3
+2018-09-19 11:15:55.702405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-09-19 11:15:55.702472: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 3
+2018-09-19 11:15:55.702504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y N N
+2018-09-19 11:15:55.702520: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N N N
+2018-09-19 11:15:55.702533: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   N N N Y
+2018-09-19 11:15:55.702543: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 3:   N N Y N
+2018-09-19 11:15:55.703690: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2018-09-19 11:15:55.966942: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10407 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2018-09-19 11:15:56.297450: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 10407 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2018-09-19 11:15:56.539062: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 10407 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+I0919 11:15:56.888302 140714015758144 tf_logging.py:115] Running local_init_op.
+I0919 11:15:56.914411 140714015758144 tf_logging.py:115] Done running local_init_op.
 TensorFlow:  1.10
 Model:       vgg16
 Dataset:     imagenet (synthetic)
@@ -464,497 +988,18 @@ Generating model
 Running warm up
 Done warm up
 Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 415.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 416.5 +/- 0.8 (jitter = 1.8)	0.000	0.000	0.000
-20	images/sec: 416.2 +/- 0.5 (jitter = 2.0)	0.000	0.000	0.008
-30	images/sec: 416.0 +/- 0.4 (jitter = 2.3)	0.000	0.000	0.008
-40	images/sec: 416.1 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.000
-50	images/sec: 415.9 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.000
-60	images/sec: 415.9 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.016
-70	images/sec: 415.7 +/- 0.3 (jitter = 2.1)	0.000	0.000	0.008
-80	images/sec: 415.5 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.008
-90	images/sec: 415.3 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.000
-100	images/sec: 414.8 +/- 0.3 (jitter = 2.7)	0.000	0.000	0.000
+1	images/sec: 417.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 417.4 +/- 0.7 (jitter = 1.4)	0.000	0.000	0.000
+20	images/sec: 417.1 +/- 0.5 (jitter = 1.4)	0.000	0.000	0.000
+30	images/sec: 416.9 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.008
+40	images/sec: 416.9 +/- 0.3 (jitter = 2.1)	0.000	0.008	0.008
+50	images/sec: 416.8 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
+60	images/sec: 416.9 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.008
+70	images/sec: 416.7 +/- 0.3 (jitter = 2.2)	0.000	0.000	0.008
+80	images/sec: 415.9 +/- 0.4 (jitter = 2.7)	0.000	0.000	0.016
+90	images/sec: 415.8 +/- 0.4 (jitter = 3.3)	0.000	0.008	0.008
+100	images/sec: 415.7 +/- 0.3 (jitter = 3.1)	0.000	0.008	0.008
 ----------------------------------------------------------------
-total images/sec: 414.57
+total images/sec: 415.62
 ----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       inception3
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  32 global
-             32 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 469.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
-10	images/sec: 461.4 +/- 2.6 (jitter = 4.4)	0.000	0.000	0.000
-20	images/sec: 462.7 +/- 1.4 (jitter = 4.2)	0.000	0.000	0.000
-30	images/sec: 463.8 +/- 1.0 (jitter = 2.8)	0.000	0.000	0.000
-40	images/sec: 464.0 +/- 0.8 (jitter = 2.8)	0.000	0.000	0.000
-50	images/sec: 464.1 +/- 0.6 (jitter = 2.8)	0.000	0.000	0.000
-60	images/sec: 464.2 +/- 0.6 (jitter = 2.9)	0.000	0.000	0.000
-70	images/sec: 464.4 +/- 0.5 (jitter = 2.9)	0.000	0.000	0.000
-80	images/sec: 464.1 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
-90	images/sec: 464.2 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
-100	images/sec: 464.3 +/- 0.4 (jitter = 2.8)	0.000	0.000	0.031
-----------------------------------------------------------------
-total images/sec: 463.27
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       inception3
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  64 global
-             64 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 495.6 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 494.9 +/- 0.5 (jitter = 1.5)	0.000	0.000	0.000
-20	images/sec: 494.0 +/- 1.0 (jitter = 2.3)	0.000	0.000	0.016
-30	images/sec: 494.1 +/- 0.7 (jitter = 2.2)	0.000	0.000	0.016
-40	images/sec: 494.1 +/- 0.5 (jitter = 1.8)	0.000	0.000	0.000
-50	images/sec: 494.3 +/- 0.4 (jitter = 1.6)	0.000	0.000	0.016
-60	images/sec: 494.3 +/- 0.4 (jitter = 1.6)	0.000	0.000	0.000
-70	images/sec: 493.8 +/- 0.4 (jitter = 2.0)	0.000	0.000	0.031
-80	images/sec: 493.4 +/- 0.4 (jitter = 2.1)	0.000	0.000	0.000
-90	images/sec: 493.4 +/- 0.4 (jitter = 2.1)	0.000	0.000	0.016
-100	images/sec: 493.4 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 492.66
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       inception3
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  128 global
-             128 per device
-Num batches: 100
-Num epochs:  0.01
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 505.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
-10	images/sec: 506.5 +/- 0.5 (jitter = 1.7)	0.000	0.000	0.000
-20	images/sec: 506.9 +/- 0.3 (jitter = 1.8)	0.000	0.008	0.008
-30	images/sec: 506.0 +/- 0.8 (jitter = 1.4)	0.000	0.000	0.000
-40	images/sec: 506.0 +/- 0.6 (jitter = 1.7)	0.000	0.000	0.000
-50	images/sec: 505.9 +/- 0.5 (jitter = 1.9)	0.000	0.000	0.000
-60	images/sec: 505.9 +/- 0.5 (jitter = 2.1)	0.000	0.008	0.008
-70	images/sec: 505.9 +/- 0.4 (jitter = 1.9)	0.000	0.008	0.016
-80	images/sec: 505.8 +/- 0.4 (jitter = 1.8)	0.000	0.000	0.008
-90	images/sec: 505.9 +/- 0.3 (jitter = 1.8)	0.000	0.000	0.000
-100	images/sec: 505.8 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 505.48
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       resnet50
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  32 global
-             32 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 642.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 640.7 +/- 0.9 (jitter = 2.0)	0.000	0.000	0.031
-20	images/sec: 637.8 +/- 1.4 (jitter = 4.6)	0.000	0.000	0.000
-30	images/sec: 638.5 +/- 1.0 (jitter = 3.9)	0.000	0.000	0.000
-40	images/sec: 637.6 +/- 0.8 (jitter = 4.7)	0.000	0.000	0.000
-50	images/sec: 636.9 +/- 0.7 (jitter = 4.2)	0.000	0.000	0.000
-60	images/sec: 637.4 +/- 0.7 (jitter = 4.4)	0.000	0.000	0.000
-70	images/sec: 637.9 +/- 0.6 (jitter = 4.7)	0.000	0.000	0.000
-80	images/sec: 637.9 +/- 0.7 (jitter = 4.9)	0.000	0.000	0.031
-90	images/sec: 638.7 +/- 0.6 (jitter = 5.5)	0.000	0.000	0.000
-100	images/sec: 639.0 +/- 0.6 (jitter = 5.0)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 637.13
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       resnet50
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  64 global
-             64 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 676.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 676.1 +/- 2.8 (jitter = 2.4)	0.000	0.000	0.016
-20	images/sec: 676.7 +/- 1.5 (jitter = 2.4)	0.000	0.000	0.000
-30	images/sec: 676.4 +/- 1.2 (jitter = 3.9)	0.000	0.000	0.000
-40	images/sec: 677.2 +/- 1.0 (jitter = 3.0)	0.000	0.000	0.000
-50	images/sec: 677.8 +/- 0.8 (jitter = 2.7)	0.000	0.000	0.000
-60	images/sec: 678.2 +/- 0.7 (jitter = 2.8)	0.000	0.000	0.000
-70	images/sec: 678.3 +/- 0.6 (jitter = 3.1)	0.000	0.000	0.000
-80	images/sec: 678.2 +/- 0.6 (jitter = 2.9)	0.000	0.000	0.000
-90	images/sec: 678.3 +/- 0.5 (jitter = 2.9)	0.000	0.000	0.000
-100	images/sec: 678.3 +/- 0.5 (jitter = 3.1)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 677.26
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       resnet50
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  128 global
-             128 per device
-Num batches: 100
-Num epochs:  0.01
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 705.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.008
-10	images/sec: 707.5 +/- 0.6 (jitter = 2.1)	0.000	0.000	0.008
-20	images/sec: 707.4 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
-30	images/sec: 707.0 +/- 0.4 (jitter = 1.7)	0.000	0.000	0.008
-40	images/sec: 706.6 +/- 0.3 (jitter = 1.8)	0.000	0.000	0.000
-50	images/sec: 706.3 +/- 0.4 (jitter = 1.9)	0.000	0.000	0.000
-60	images/sec: 706.6 +/- 0.4 (jitter = 1.8)	0.000	0.000	0.016
-70	images/sec: 706.7 +/- 0.3 (jitter = 2.2)	0.000	0.000	0.000
-80	images/sec: 706.6 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.000
-90	images/sec: 706.4 +/- 0.3 (jitter = 2.3)	0.000	0.000	0.008
-100	images/sec: 706.0 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 705.18
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       resnet152
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  32 global
-             32 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 260.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 261.4 +/- 0.4 (jitter = 1.4)	0.000	0.000	0.000
-20	images/sec: 262.3 +/- 0.4 (jitter = 1.9)	0.000	0.000	0.062
-30	images/sec: 262.3 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
-40	images/sec: 262.4 +/- 0.3 (jitter = 1.6)	0.000	0.000	0.000
-50	images/sec: 262.2 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
-60	images/sec: 262.2 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
-70	images/sec: 262.3 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
-80	images/sec: 262.4 +/- 0.2 (jitter = 1.6)	0.000	0.000	0.031
-90	images/sec: 262.4 +/- 0.2 (jitter = 1.5)	0.000	0.000	0.000
-100	images/sec: 262.5 +/- 0.2 (jitter = 1.5)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 262.07
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       resnet152
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  64 global
-             64 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 280.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 280.5 +/- 0.5 (jitter = 0.9)	0.000	0.000	0.000
-20	images/sec: 280.8 +/- 0.3 (jitter = 0.8)	0.000	0.000	0.000
-30	images/sec: 280.3 +/- 0.3 (jitter = 0.8)	0.000	0.000	0.000
-40	images/sec: 280.2 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.000
-50	images/sec: 280.1 +/- 0.2 (jitter = 1.1)	0.000	0.000	0.016
-60	images/sec: 280.1 +/- 0.2 (jitter = 1.0)	0.000	0.000	0.000
-70	images/sec: 280.0 +/- 0.1 (jitter = 1.0)	0.000	0.000	0.000
-80	images/sec: 279.7 +/- 0.2 (jitter = 1.1)	0.000	0.000	0.016
-90	images/sec: 279.4 +/- 0.2 (jitter = 1.2)	0.000	0.000	0.016
-100	images/sec: 279.3 +/- 0.2 (jitter = 1.2)	0.000	0.016	0.016
-----------------------------------------------------------------
-total images/sec: 279.03
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       resnet152
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  128 global
-             128 per device
-Num batches: 100
-Num epochs:  0.01
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 292.1 +/- 0.0 (jitter = 0.0)	0.000	0.008	0.016
-10	images/sec: 291.4 +/- 0.2 (jitter = 0.7)	0.000	0.008	0.008
-20	images/sec: 291.8 +/- 0.2 (jitter = 0.9)	0.000	0.000	0.008
-30	images/sec: 291.8 +/- 0.1 (jitter = 0.7)	0.000	0.000	0.016
-40	images/sec: 291.8 +/- 0.1 (jitter = 0.6)	0.000	0.000	0.000
-50	images/sec: 291.7 +/- 0.1 (jitter = 0.8)	0.000	0.000	0.000
-60	images/sec: 291.5 +/- 0.1 (jitter = 0.8)	0.000	0.000	0.016
-70	images/sec: 291.3 +/- 0.1 (jitter = 0.9)	0.000	0.008	0.016
-80	images/sec: 290.8 +/- 0.2 (jitter = 1.1)	0.000	0.008	0.008
-90	images/sec: 290.2 +/- 0.3 (jitter = 1.3)	0.000	0.000	0.016
-100	images/sec: 289.9 +/- 0.3 (jitter = 1.7)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 289.80
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       alexnet
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  32 global
-             32 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 4628.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 4672.6 +/- 21.5 (jitter = 74.8)	0.000	0.000	0.000
-20	images/sec: 4656.4 +/- 22.0 (jitter = 68.6)	0.000	0.000	0.000
-30	images/sec: 4620.5 +/- 22.5 (jitter = 88.9)	0.000	0.000	0.000
-40	images/sec: 4626.5 +/- 18.1 (jitter = 87.4)	0.000	0.000	0.000
-50	images/sec: 4649.6 +/- 16.8 (jitter = 84.3)	0.000	0.000	0.000
-60	images/sec: 4675.5 +/- 17.4 (jitter = 105.6)	0.000	0.000	0.000
-70	images/sec: 4676.6 +/- 15.4 (jitter = 94.3)	0.000	0.000	0.000
-80	images/sec: 4683.2 +/- 13.9 (jitter = 95.8)	0.000	0.000	0.000
-90	images/sec: 4682.9 +/- 13.0 (jitter = 98.8)	0.000	0.000	0.000
-100	images/sec: 4629.8 +/- 28.4 (jitter = 95.9)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 4563.76
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       alexnet
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  64 global
-             64 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 5978.0 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 5812.1 +/- 55.5 (jitter = 102.6)	0.000	0.000	0.000
-20	images/sec: 5869.2 +/- 31.5 (jitter = 72.8)	0.000	0.016	0.016
-30	images/sec: 5852.4 +/- 23.1 (jitter = 99.8)	0.000	0.000	0.000
-40	images/sec: 5855.5 +/- 18.3 (jitter = 89.7)	0.000	0.000	0.000
-50	images/sec: 5867.6 +/- 16.2 (jitter = 86.6)	0.000	0.000	0.000
-60	images/sec: 5874.9 +/- 14.0 (jitter = 84.9)	0.000	0.000	0.000
-70	images/sec: 5855.1 +/- 14.5 (jitter = 95.3)	0.000	0.000	0.000
-80	images/sec: 5839.0 +/- 13.7 (jitter = 120.8)	0.000	0.000	0.000
-90	images/sec: 5835.6 +/- 12.5 (jitter = 119.5)	0.000	0.000	0.000
-100	images/sec: 5829.0 +/- 11.9 (jitter = 115.9)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 5763.36
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       alexnet
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  128 global
-             128 per device
-Num batches: 100
-Num epochs:  0.01
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 6240.6 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 6360.3 +/- 25.6 (jitter = 111.5)	0.000	0.000	0.000
-20	images/sec: 6365.7 +/- 16.9 (jitter = 75.9)	0.000	0.000	0.008
-30	images/sec: 6368.9 +/- 14.2 (jitter = 85.6)	0.000	0.008	0.008
-40	images/sec: 6363.6 +/- 11.4 (jitter = 73.4)	0.000	0.000	0.000
-50	images/sec: 6359.5 +/- 11.1 (jitter = 75.1)	0.000	0.000	0.000
-60	images/sec: 6363.7 +/- 9.9 (jitter = 78.0)	0.000	0.000	0.000
-70	images/sec: 6361.7 +/- 8.8 (jitter = 67.9)	0.000	0.000	0.008
-80	images/sec: 6360.4 +/- 8.0 (jitter = 71.5)	0.000	0.000	0.000
-90	images/sec: 6370.0 +/- 8.0 (jitter = 79.0)	0.000	0.000	0.000
-100	images/sec: 6376.3 +/- 7.6 (jitter = 86.1)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 6333.05
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       vgg16
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  32 global
-             32 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 407.2 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 405.1 +/- 0.9 (jitter = 2.6)	0.000	0.000	0.000
-20	images/sec: 405.3 +/- 0.6 (jitter = 2.1)	0.000	0.000	0.000
-30	images/sec: 405.3 +/- 0.4 (jitter = 2.5)	0.000	0.000	0.000
-40	images/sec: 405.0 +/- 0.7 (jitter = 2.5)	0.000	0.000	0.000
-50	images/sec: 404.9 +/- 0.7 (jitter = 2.6)	0.000	0.000	0.000
-60	images/sec: 405.0 +/- 0.6 (jitter = 2.6)	0.000	0.000	0.000
-70	images/sec: 405.2 +/- 0.5 (jitter = 2.5)	0.000	0.031	0.062
-80	images/sec: 405.3 +/- 0.4 (jitter = 2.7)	0.000	0.000	0.000
-90	images/sec: 405.3 +/- 0.4 (jitter = 2.6)	0.000	0.000	0.000
-100	images/sec: 405.2 +/- 0.4 (jitter = 2.5)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 404.34
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       vgg16
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  64 global
-             64 per device
-Num batches: 100
-Num epochs:  0.00
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 413.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.031
-10	images/sec: 416.3 +/- 1.0 (jitter = 2.9)	0.000	0.000	0.016
-20	images/sec: 414.9 +/- 1.0 (jitter = 2.7)	0.000	0.000	0.000
-30	images/sec: 415.0 +/- 0.7 (jitter = 3.1)	0.000	0.000	0.000
-40	images/sec: 414.9 +/- 0.6 (jitter = 3.0)	0.000	0.000	0.000
-50	images/sec: 414.8 +/- 0.5 (jitter = 2.8)	0.000	0.000	0.000
-60	images/sec: 414.9 +/- 0.4 (jitter = 2.9)	0.000	0.000	0.000
-70	images/sec: 414.9 +/- 0.4 (jitter = 2.9)	0.000	0.000	0.000
-80	images/sec: 415.0 +/- 0.4 (jitter = 2.9)	0.000	0.000	0.016
-90	images/sec: 415.0 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.000
-100	images/sec: 415.1 +/- 0.3 (jitter = 2.9)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 414.56
-----------------------------------------------------------------
-TensorFlow:  1.10
-Model:       vgg16
-Dataset:     imagenet (synthetic)
-Mode:        forward-only
-SingleSess:  False
-Batch size:  128 global
-             128 per device
-Num batches: 100
-Num epochs:  0.01
-Devices:     ['/gpu:0']
-Data format: NCHW
-Optimizer:   sgd
-Variables:   parameter_server
-==========
-Generating model
-Running warm up
-Done warm up
-Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
-1	images/sec: 416.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
-10	images/sec: 416.3 +/- 0.6 (jitter = 2.0)	0.000	0.000	0.000
-20	images/sec: 416.1 +/- 0.4 (jitter = 2.2)	0.000	0.000	0.008
-30	images/sec: 415.8 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.008
-40	images/sec: 415.7 +/- 0.3 (jitter = 2.0)	0.000	0.000	0.000
-50	images/sec: 415.5 +/- 0.3 (jitter = 2.5)	0.000	0.000	0.000
-60	images/sec: 415.2 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.016
-70	images/sec: 415.2 +/- 0.3 (jitter = 2.8)	0.000	0.000	0.008
-80	images/sec: 415.1 +/- 0.3 (jitter = 2.7)	0.000	0.000	0.008
-90	images/sec: 415.1 +/- 0.2 (jitter = 2.5)	0.000	0.000	0.000
-100	images/sec: 414.9 +/- 0.2 (jitter = 2.7)	0.000	0.000	0.000
-----------------------------------------------------------------
-total images/sec: 414.72
-----------------------------------------------------------------
+Stop training vgg16 {batch_size = 128}
