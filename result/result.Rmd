@@ -3,7 +3,7 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-## GPU
+## Local
 
 | Name | Version |
 |------|---------|
@@ -62,3 +62,7 @@ output: html_notebook
 | 32                      | 811.08      | 1100.19   | 450.87     | 3223.47  | 743.69 |
 | 64                      | 915.80      | 1265.44   | 511.48     | 6442.35  | 819.66 |
 | 128                     | 974.89      | 1360.31   | 550.77     | 11210.57 | 823.41 |
+
+## Distributed
+
+### 1 PS & 1 Worker
