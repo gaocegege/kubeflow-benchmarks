@@ -65,4 +65,18 @@ output: html_notebook
 
 ## Distributed
 
-### 1 PS & 1 Worker
+### 1 PS & 1 Worker (Parameter Server)
+
+| GPU (Worker) | InceptionV3 | ResNet-50 | ResNet-152 | AlexNet | VGG16 |
+|--------------|-------------|-----------|------------|---------|-------|
+| 1            |             | 70.02     |            |         |       |
+| 2            |             | 130.73    |            |         |       |
+| 4            |             | 246.58    |            |         |       |
+
+### 1 PS & 2 Worker (Parameter Server)
+
+| GPU (Per Worker) | InceptionV3 | ResNet-50 | ResNet-152 | AlexNet | VGG16 |
+|--------------|-------------|-----------|------------|---------|-------|
+| 1            |             |     |            |         |       |
+| 2            |             |     |            |         |       |
+| 4            |             |     |            |         |   343.34    |
