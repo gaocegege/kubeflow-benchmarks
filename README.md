@@ -1,8 +1,8 @@
-# kubeflow-benchmarks
+# kubeflow-benchmarks --
 
-## TensorFlow on Kubernetes
+## TensorFlow on Kubernetes --
 
-### Local
+### Local --
 
 - Native and dockerized cnn benchmark (1 GPU)
 - Native and dockerized cnn benchmark (2 GPUs)
@@ -17,30 +17,30 @@ $ ./scripts/single.sh
 $ ./scripts/double.sh
 ```
 
-### Distributed
+### Distributed --
 
-#### PS/Worker distribution strategy
-
-- Native and dockerized in one machine
-- Native and dockerized in different machines
-- Kubernetes default-scheduler vs kube-arbitrator vs ideal-scheduler
-
-#### Mirrored distribution strategy
-
-- Native and dockerized in one machine
-
-#### Collective AllReduce strategy
+#### PS/Worker distribution strategy --
 
 - Native and dockerized in one machine
 - Native and dockerized in different machines
 - Kubernetes default-scheduler vs kube-arbitrator vs ideal-scheduler
 
-#### Uber Horovod (Optional)
+#### Mirrored distribution strategy --
+
+- Native and dockerized in one machine
+
+#### Collective AllReduce strategy --
 
 - Native and dockerized in one machine
 - Native and dockerized in different machines
 - Kubernetes default-scheduler vs kube-arbitrator vs ideal-scheduler
 
-## PyTorch on Kubernetes
+#### Uber Horovod (Optional) --
+
+- Native and dockerized in one machine
+- Native and dockerized in different machines
+- Kubernetes default-scheduler vs kube-arbitrator vs ideal-scheduler
+
+## PyTorch on Kubernetes --
 
 TBA
